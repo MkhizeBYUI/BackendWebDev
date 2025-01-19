@@ -1,6 +1,143 @@
 /******* Change Box Model ***************/
-*,
+* ,
 *:before,
-*:after {
+*:after{
   box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.siteName{
+  font-size: 40px;
+  color: black;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+#tools {
+  a {
+    text-decoration: none;
+    color: black;
+    text-transform:uppercase;
+  }
+}
+nav ul {
+  background-color:black;
+  color: white;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  font-size: larger;
+  padding: 20px;
+}
+h1 {
+    font-family:'Times New Roman', Times, serif;
+}
+#bgImage{
+  width:fit-content;
+}
+#promoBox{
+  color:#1e94bc;
+  background-color: rgb(240, 248, 255, 0.5);
+  width: fit-content;
+  height: 130px;
+  margin-left: 10px;
+  #boldWords{
+    font-weight: bolder;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #ownToday{
+    background-color:aqua;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: bolder;
+    color: black;
+  }
+}
+#heroImage{
+  background-image: url(/images/vehicles/delorean.jpg);
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 40vh;
+
+}
+#review ul {
+  margin-left: -20px;
+  li {
+    padding-top: 10px;
+  }
+}
+h3 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  grid-column: 1/3;
+  text-align: left;
+}
+#upgrades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90vw;
+  row-gap: 20px;
+  column-gap: 10px;
+  text-align: center;
+  justify-self: center;
+  img {
+    align-self: center;
+    justify-self: center;
+    background-color: #1e94bc;
+    padding: 10px 40px;
+    border: black;
+    border-style: ridge;
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    
+  }
+}
+@media (min-width: 768px){
+  body {
+    padding: 10px 50px;
+    background-image: url(/images/site/small_check.jpg);
+  }
+  #wrapper {
+    border-style: solid;
+    border-color: #1e94bc;
+    padding: 10px;
+    background-color: white;
+    object-fit: contain;
+  }
+  #promoBox{
+    width: 30vw;
+    height: 30vw;
+    font-size: 30px;
+  }
+  #mainBody{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    font-size: 25px;
+    #review {
+      grid-column: 2/3;
+      object-fit: contain;
+    }
+    #upgrades {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      object-fit: contain;
+      width: 40vw;
+    }
+    
+  }
+  
+  
 }
